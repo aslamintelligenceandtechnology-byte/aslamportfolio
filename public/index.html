@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aslam | Full Stack Dev</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Mobile menu toggle -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">Aslam.</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home"     onclick="closeMenu()">Home</a></li>
+            <li><a href="#about"    onclick="closeMenu()">About</a></li>
+            <li><a href="#skills"   onclick="closeMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact"  onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero-section">
+        <div class="section-art hero-art">
+            <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <text x="20"   y="340" class="art-bracket">{</text>
+                <text x="1090" y="430" class="art-bracket">}</text>
+                <text x="60"   y="110" class="art-code">const dev = new Aslam();</text>
+                <text x="820"  y="580" class="art-code">return creativity + code;</text>
+                <text x="70"   y="650" class="art-code">// Full Stack Developer</text>
+                <text x="720"  y="70"  class="art-code">import { passion } from 'life';</text>
+                <text x="40"   y="500" class="art-code-sm">while(true) { build(); }</text>
+                <text x="850"  y="200" class="art-code-sm">npm run dev</text>
+                <line x1="570" y1="310" x2="630" y2="310" class="art-cross"/>
+                <line x1="600" y1="280" x2="600" y2="340" class="art-cross"/>
+                <circle cx="600" cy="310" r="20"  class="art-cross-circle"/>
+                <circle cx="600" cy="310" r="40"  class="art-cross-circle-lg"/>
+                <line x1="30"   y1="30"  x2="70"   y2="30"  class="art-corner"/>
+                <line x1="30"   y1="30"  x2="30"   y2="70"  class="art-corner"/>
+                <line x1="1170" y1="30"  x2="1130" y2="30"  class="art-corner"/>
+                <line x1="1170" y1="30"  x2="1170" y2="70"  class="art-corner"/>
+                <line x1="30"   y1="670" x2="70"   y2="670" class="art-corner"/>
+                <line x1="30"   y1="670" x2="30"   y2="630" class="art-corner"/>
+                <line x1="1170" y1="670" x2="1130" y2="670" class="art-corner"/>
+                <line x1="1170" y1="670" x2="1170" y2="630" class="art-corner"/>
+                <line x1="0"    y1="350" x2="450"  y2="350" class="art-rule"/>
+                <line x1="750"  y1="350" x2="1200" y2="350" class="art-rule"/>
+            </svg>
+            <span class="cursor-blink">_</span>
+        </div>
+
+        <p class="greeting">👋 Hi, I'm Aslam, a Freelance</p>
+        <div class="hero-typography">
+            <h1 class="solid-text">Full Stack Dev</h1>
+            <img src="images/profile2.png" alt="My Portrait" class="hero-image">
+            <h1 class="outline-text">& Tech Enthusiast</h1>
+        </div>
+        <p class="location-text">Ready to build something amazing.</p>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section-container">
+        <div class="section-art about-art">
+            <svg viewBox="0 0 1100 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <line x1="150" y1="100" x2="380" y2="210" class="node-line"/>
+                <line x1="380" y1="210" x2="600" y2="110" class="node-line"/>
+                <line x1="600" y1="110" x2="820" y2="260" class="node-line"/>
+                <line x1="380" y1="210" x2="560" y2="360" class="node-line"/>
+                <line x1="150" y1="100" x2="230" y2="330" class="node-line"/>
+                <line x1="230" y1="330" x2="560" y2="360" class="node-line"/>
+                <line x1="600" y1="110" x2="560" y2="360" class="node-line"/>
+                <line x1="820" y1="260" x2="750" y2="430" class="node-line"/>
+                <line x1="560" y1="360" x2="750" y2="430" class="node-line"/>
+                <line x1="60"  y1="280" x2="150" y2="100" class="node-line"/>
+                <line x1="60"  y1="280" x2="230" y2="330" class="node-line"/>
+                <circle cx="150" cy="100" r="6"  class="node-dot"/>
+                <circle cx="380" cy="210" r="9"  class="node-dot-lg"/>
+                <circle cx="600" cy="110" r="6"  class="node-dot"/>
+                <circle cx="820" cy="260" r="6"  class="node-dot"/>
+                <circle cx="230" cy="330" r="5"  class="node-dot"/>
+                <circle cx="560" cy="360" r="9"  class="node-dot-lg"/>
+                <circle cx="750" cy="430" r="6"  class="node-dot"/>
+                <circle cx="60"  cy="280" r="5"  class="node-dot"/>
+                <text x="155" y="94"  class="node-label">React</text>
+                <text x="385" y="204" class="node-label">Node.js</text>
+                <text x="605" y="104" class="node-label">PostgreSQL</text>
+                <text x="825" y="254" class="node-label">Express</text>
+                <text x="208" y="324" class="node-label">Unity</text>
+                <text x="565" y="354" class="node-label">MongoDB</text>
+                <text x="755" y="424" class="node-label">Python</text>
+                <text x="28"  y="274" class="node-label">C#</text>
+            </svg>
+        </div>
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p class="reveal">I am a naturally curious person, always fascinated by how things work in the world around me. My journey into coding unexpectedly began with a passion project: creating a game based on <em>Stranger Things</em>. That single project sparked a deep love for programming.</p>
+            <p class="reveal">However, my creative roots run much deeper than code. Long before I wrote my first script, I was exploring design and digital media, eventually channeling that creativity into freelance projects. Today, I blend my technical expertise as a full-stack developer with my creative eye to build applications that are not only highly functional but also beautifully crafted.</p>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section-container">
+        <div class="section-art circuit-art">
+            <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 L180,80 L180,130 L500,130 L500,80 L780,80 L780,180 L1200,180" class="circuit-trace"/>
+                <path d="M0,290 L130,290 L130,240 L390,240 L390,340 L680,340 L680,290 L1200,290" class="circuit-trace"/>
+                <path d="M0,490 L280,490 L280,440 L580,440 L580,490 L880,490 L880,460 L1200,460" class="circuit-trace"/>
+                <line x1="180" y1="80"  x2="180" y2="290" class="circuit-trace"/>
+                <line x1="500" y1="130" x2="500" y2="340" class="circuit-trace"/>
+                <line x1="780" y1="80"  x2="780" y2="490" class="circuit-trace"/>
+                <line x1="130" y1="290" x2="130" y2="490" class="circuit-trace"/>
+                <rect x="176" y="76"  width="8" height="8" rx="1" class="circuit-pad"/>
+                <rect x="496" y="126" width="8" height="8" rx="1" class="circuit-pad"/>
+                <rect x="776" y="176" width="8" height="8" rx="1" class="circuit-pad"/>
+                <rect x="386" y="236" width="8" height="8" rx="1" class="circuit-pad"/>
+                <rect x="676" y="336" width="8" height="8" rx="1" class="circuit-pad"/>
+                <rect x="126" y="286" width="8" height="8" rx="1" class="circuit-pad"/>
+                <rect x="276" y="486" width="8" height="8" rx="1" class="circuit-pad"/>
+                <rect x="310" y="100" width="70" height="38" rx="3" class="circuit-chip"/>
+                <text x="332" y="124" class="chip-label">CPU</text>
+                <rect x="600" y="250" width="70" height="38" rx="3" class="circuit-chip"/>
+                <text x="614" y="274" class="chip-label">MEM</text>
+                <rect x="870" y="360" width="70" height="38" rx="3" class="circuit-chip"/>
+                <text x="884" y="384" class="chip-label">I/O</text>
+                <line x1="310" y1="110" x2="298" y2="110" class="circuit-pin"/>
+                <line x1="310" y1="122" x2="298" y2="122" class="circuit-pin"/>
+                <line x1="310" y1="134" x2="298" y2="134" class="circuit-pin"/>
+                <line x1="380" y1="110" x2="392" y2="110" class="circuit-pin"/>
+                <line x1="380" y1="122" x2="392" y2="122" class="circuit-pin"/>
+                <line x1="380" y1="134" x2="392" y2="134" class="circuit-pin"/>
+            </svg>
+        </div>
+        <h2 class="section-title">My Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-category reveal">
+                <h3>Front-End</h3>
+                <p>HTML5, CSS3, React.js, EJS, Bootstrap</p>
+            </div>
+            <div class="skill-category reveal">
+                <h3>Back-End</h3>
+                <p>Node.js, Express.js, JavaScript, Axios</p>
+            </div>
+            <div class="skill-category reveal">
+                <h3>Databases & Security</h3>
+                <p>PostgreSQL, MySQL, MongoDB, Mongoose, Password Hashing, OAuth</p>
+            </div>
+            <div class="skill-category reveal">
+                <h3>Game Dev</h3>
+                <p>Unity (2D & 3D), C#</p>
+            </div>
+            <div class="skill-category reveal">
+                <h3>Languages</h3>
+                <p>Python, Java, JavaScript, C</p>
+            </div>
+            <div class="skill-category reveal">
+                <h3>Creative Tools</h3>
+                <p>Adobe Premiere Pro, Adobe Photoshop, Canva</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section-container">
+        <div class="section-art iso-art">
+            <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0"   y1="350" x2="700"  y2="0"   class="iso-line"/>
+                <line x1="100" y1="400" x2="800"  y2="50"  class="iso-line"/>
+                <line x1="200" y1="450" x2="900"  y2="100" class="iso-line"/>
+                <line x1="300" y1="500" x2="1000" y2="150" class="iso-line"/>
+                <line x1="400" y1="550" x2="1100" y2="200" class="iso-line"/>
+                <line x1="500" y1="600" x2="1200" y2="250" class="iso-line"/>
+                <line x1="500" y1="0"   x2="1200" y2="350" class="iso-line"/>
+                <line x1="400" y1="0"   x2="1100" y2="350" class="iso-line"/>
+                <line x1="300" y1="0"   x2="1000" y2="350" class="iso-line"/>
+                <line x1="200" y1="0"   x2="900"  y2="350" class="iso-line"/>
+                <line x1="100" y1="0"   x2="800"  y2="350" class="iso-line"/>
+                <line x1="0"   y1="0"   x2="700"  y2="350" class="iso-line"/>
+                <polygon points="700,0  800,50  700,100 600,50"   class="iso-tile"/>
+                <polygon points="900,100 1000,150 900,200 800,150" class="iso-tile"/>
+                <polygon points="500,200 600,250  500,300 400,250" class="iso-tile"/>
+                <polygon points="300,100 400,50   500,100 400,150" class="iso-tile-dim"/>
+            </svg>
+        </div>
+        <h2 class="section-title">Featured Work</h2>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <img src="images/project-erp.jpg" alt="Workforce ERP Application" class="project-img">
+                <div class="project-info">
+                    <h3>Workforce ERP Application</h3>
+                    <p class="client">Client: PH Matworks</p>
+                    <p>A full-stack tracking application built for a freelance client. Admins can assign and track work, manage clients, and monitor completion status. Workers can view their daily assignments directly from their mobile phones.</p>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <img src="images/project-lux.jpg" alt="Luxury Brand Portfolio" class="project-img">
+                <div class="project-info">
+                    <h3>Luxury Brand Portfolio</h3>
+                    <p class="client">Client: PH Matworks</p>
+                    <p>A premium, luxurious website designed to showcase Korai mats. The site narrates the company's rich heritage, the craftsmanship behind the mats, and the benefits of their unique materials.</p>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <img src="images/project-book.jpg" alt="Social Book Haven" class="project-img">
+                <div class="project-info">
+                    <h3>Social Book Haven</h3>
+                    <p class="client">Personal Project</p>
+                    <p>A web application where users can list, add, and curate their favorite books. It includes features to recommend top picks to friends and discover new reads.</p>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <img src="images/game-upsidedown.jpg" alt="UpSideDown Game" class="project-img">
+                <div class="project-info">
+                    <h3>UpSideDown</h3>
+                    <p class="client">Game Development</p>
+                    <p>A <em>Stranger Things</em> inspired shooter. Use the power of music to defeat Demodogs, gather hidden collectibles, and survive the Upside Down to achieve the ultimate high score.</p>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <img src="images/game-math.jpg" alt="Mathamajecian Game" class="project-img">
+                <div class="project-info">
+                    <h3>Mathamajecian</h3>
+                    <p class="client">Game Development</p>
+                    <p>An educational puzzle game designed to test your calculus reflexes. Players must quickly identify the correct differentiation and integration formulas under pressure to rack up a high score.</p>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <img src="images/game-messi.jpg" alt="Win The World Game" class="project-img">
+                <div class="project-info">
+                    <h3>Win The World: La Pulga's Quest</h3>
+                    <p class="client">Game Development</p>
+                    <p>A 7-level action game starring Lionel Messi equipped with a jetpack! Navigate through challenging stages to secure the Champions League, Copa America, Finalissima, and ultimately, the World Cup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section-container">
+        <div class="section-art contact-art">
+            <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <path d="M60,250 Q180,120 300,250 Q420,380 540,250 Q660,120 780,250 Q900,380 1020,250" class="signal-wave"/>
+                <path d="M60,250 Q180,155 300,250 Q420,345 540,250 Q660,155 780,250 Q900,345 1020,250" class="signal-wave signal-wave-2"/>
+                <path d="M60,250 Q180,200 300,250 Q420,300 540,250 Q660,200 780,250 Q900,300 1020,250" class="signal-wave signal-wave-3"/>
+                <circle cx="60"   cy="250" r="5" class="signal-dot"/>
+                <circle cx="300"  cy="250" r="4" class="signal-dot" style="animation-delay:.4s"/>
+                <circle cx="540"  cy="250" r="4" class="signal-dot" style="animation-delay:.8s"/>
+                <circle cx="780"  cy="250" r="4" class="signal-dot" style="animation-delay:1.2s"/>
+                <circle cx="1020" cy="250" r="4" class="signal-dot" style="animation-delay:1.6s"/>
+                <text x="980" y="380" class="art-at">@</text>
+                <line x1="20"   y1="20"  x2="60"   y2="20"  class="art-corner"/>
+                <line x1="20"   y1="20"  x2="20"   y2="60"  class="art-corner"/>
+                <line x1="1180" y1="20"  x2="1140" y2="20"  class="art-corner"/>
+                <line x1="1180" y1="20"  x2="1180" y2="60"  class="art-corner"/>
+                <line x1="20"   y1="480" x2="60"   y2="480" class="art-corner"/>
+                <line x1="20"   y1="480" x2="20"   y2="440" class="art-corner"/>
+            </svg>
+        </div>
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info reveal">
+                <h3>Find me online</h3>
+                <div class="social-links">
+                    <a href="https://github.com/Aslam-17" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/mohammed-aslam-0797b238b/" target="_blank">LinkedIn</a>
+                    <a href="mailto:phmraslam@gmail.com">Email Me</a>
+                    <a href="https://wa.me/917550333990" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div class="contact-form-container reveal">
+                <h3>Send an Inquiry</h3>
+                <form id="contactForm" action="/contact" method="POST">
+                    <input type="text"  name="name"    placeholder="Your Name"    required>
+                    <input type="email" name="email"   placeholder="Your Email"   required>
+                    <textarea name="message" rows="5"  placeholder="Tell me about your project..." required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Navbar scroll effect
+        const nb = document.getElementById('navbar');
+        window.addEventListener('scroll', () => nb.classList.toggle('scrolled', scrollY > 40));
+
+        // Hamburger menu
+        const ham = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        ham.addEventListener('click', () => {
+            ham.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+        function closeMenu() {
+            ham.classList.remove('open');
+            navLinks.classList.remove('open');
+        }
+        // Close on outside click
+        document.addEventListener('click', e => {
+            if (!nb.contains(e.target)) closeMenu();
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.transitionDelay = (e.target.dataset.delay || 0) + 'ms';
+                    e.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            el.dataset.delay = (i % 4) * 100;
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    color: #111;
+    background-color: #fafafa;
+}
+
+/* --- Frosted Glass Navigation --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+/* --- Hero Section (The "Bazil" Style) --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.greeting {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.hero-typography {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.solid-text {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: #111;
+    z-index: 1;
+}
+
+.outline-text {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px #111; /* Hollow text effect */
+    z-index: 3;
+}
+
+/* --- UPDATE THIS BLOCK IN YOUR CSS --- */
+.hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Adjust max-width depending on how big you want to be */
+    max-width: 80%; 
+    width: 500px; /* Starting width */
+    height: auto;
+    z-index: 2; /* Sandwiched between solid and outline text */
+    
+    /* REMOVED border-radius so the cutout looks natural */
+    /* border-radius: 20px; */ 
+
+    /* Optional: If Gemini didn't make it perfectly B&W, ensure it here */
+    filter: grayscale(100%); 
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover effect: subtle pop */
+.hero-image:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.location-text {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* --- General Sections --- */
+.section-container {
+    padding: 100px 10%;
+}
+
+.bg-light {
+    background-color: #f1f1f1;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* --- About --- */
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Skills & Projects Grid --- */
+.skills-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Made slightly wider */
+    gap: 2.5rem;
+}
+
+.skill-category {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Updated Project Card Styling */
+.project-card {
+    background: #fff;
+    /* Removed padding here so image goes to edges */
+    border-radius: 16px;
+    overflow: hidden; /* Ensures image stays inside rounded corners */
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* New Project Image Styling */
+.project-img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Creates a cinematic rectangular shape */
+    object-fit: cover; /* Ensures image fills space without stretching */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Wrapper for text content inside card */
+.project-info {
+    padding: 1.5rem 2rem 2rem 2rem;
+    flex-grow: 1; /* Ensures cards are same height even with different text length */
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-category:hover, .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+/* ... rest of CSS ... */
+
+/* --- Contact Section --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 2px solid #111;
+    width: fit-content;
+    padding-bottom: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fafafa;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #111;
+}
+
+.submit-btn {
+    background: #111;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #333;
+}
+
+/* =========================================
+   NEW CLEAN BACKGROUND & FROSTY TILES
+   ========================================= */
+
+/* 1. Clean, Professional Global Background */
+body {
+    /* A subtle, modern light bluish-gray gradient. Very professional. */
+    background: linear-gradient(135deg, #f6f8fd 0%, #e9eeef 100%);
+    min-height: 100vh;
+}
+
+/* Ensure sections don't block the main background */
+.bg-light {
+    background-color: transparent;
+    border: none;
+    backdrop-filter: none;
+}
+
+/* 2. The Premium "Frosty" Glass Tiles */
+.skill-category, .project-card {
+    /* Transparency is key for the frost effect */
+    background: rgba(255, 255, 255, 0.65); 
+    
+    /* The heavy Blur effect creates the frosted look */
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+    
+    /* Subtle white border defines the glass edges */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    
+    /* A soft, diffused shadow lifts it off the page */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    
+    /* Styling tweaks */
+    border-radius: 24px; /* Rounder corners look more modern */
+    padding: 2rem;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Important for the project image corners */
+}
+
+/* 3. Hover Effect: Lift and brighten */
+.skill-category:hover, .project-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    background: rgba(255, 255, 255, 0.85); /* Becomes more opaque/white on hover */
+    border: 1px solid rgba(255, 255, 255, 0.8); /* Brighter border */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+}
+
+/* Ensure project images fit the new rounder corners */
+.project-card .project-img {
+    border-radius: 24px 24px 0 0;
+}
+@keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(15%, 15%) scale(1.2); }
+}
+
+/* 4. Update sections to let the background peek through! */
+.section-container {
+    padding: 100px 10%;
+    /* Remove any solid white background so the glow shows */
+    background: transparent; 
+}
+
+/* Make the alternating sections into a 'Glass' effect instead of solid grey */
+.bg-light {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Creates a cool glass window over the glow */
+}
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .hero-image {
+        width: 180px;
+        height: 220px;
+    }
+}
