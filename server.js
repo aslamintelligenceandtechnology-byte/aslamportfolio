@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT | 3000;
 
 // Middleware to parse data from the form
 app.use(express.json());
