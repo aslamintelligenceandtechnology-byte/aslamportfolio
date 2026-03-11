@@ -1,34 +1,34 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware to parse data from the form
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve the static files from your 'public' folder
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Handle the contact form submission
 app.post('/contact', async (req, res) => {
     const { name, email, message } = req.body;
 
     try {
-        // FIXED: Using createTransport (no 'er' at the end)
+      
         const transporter = nodemailer.createTransport({
             service: 'gmail', 
             auth: {
-                user: 'phmraslam@gmail.com', 
-                pass: 'qwxb ylrb kysk nnfz'   
+                user: process.env.EMAIL_USER, 
+                pass: process.env.EMAIL_PASS   
             }
         });
 
         const mailOptions = {
             from: email,
-            to: 'phmraslam@gmail.com',       // The email address where you want to receive messages
+            to: 'phmraslam@gmail.com',     
             subject: `New Portfolio Inquiry from ${name}`,
             text: `You have a new message from your portfolio website.\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
         };

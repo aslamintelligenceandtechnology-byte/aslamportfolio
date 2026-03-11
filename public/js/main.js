@@ -3,22 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Stop the page from reloading
+            e.preventDefault(); 
 
             const submitBtn = document.querySelector('.submit-btn');
             const originalText = submitBtn.textContent;
             
-            // Show loading state
+            
             submitBtn.textContent = 'Sending...';
             submitBtn.style.opacity = '0.7';
             submitBtn.disabled = true;
 
-            // Gather the data
+            
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData.entries());
 
             try {
-                // Send data to our server.js
+                
                 const response = await fetch('/contact', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (result.success) {
                     alert('Thanks for reaching out! Your message has been sent.');
-                    contactForm.reset(); // Clear the form
+                    contactForm.reset(); 
                 } else {
                     alert('Oops! Something went wrong. Please try again.');
                 }
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error:', error);
                 alert('An error occurred. Please try again later.');
             } finally {
-                // Reset button state
+                
                 submitBtn.textContent = originalText;
                 submitBtn.style.opacity = '1';
                 submitBtn.disabled = false;
